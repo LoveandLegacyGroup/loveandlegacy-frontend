@@ -1,30 +1,18 @@
 [
   {
-    "content": "Polish: refine global tokens (typography, spacing, Ken Burns, button sweep) in index.css",
+    "content": "Audit all eco_* and missing image references across the codebase",
     "status": "completed"
   },
   {
-    "content": "Polish: add cinematic page transitions in Layout (Framer Motion AnimatePresence)",
+    "content": "Update brand.js — remove eco_* references, map all keys to existing art_*/tahoe_/sprinter_/logo_ files",
     "status": "completed"
   },
   {
-    "content": "Polish: refine PageHero (Ken Burns, editorial headline reveal)",
+    "content": "Refactor HomePage, ServicesPage, AboutPage, ExecutiveProtectionPage — replace eco* refs with art_* / vehicle photos, drop unmappable tiles",
     "status": "completed"
   },
   {
-    "content": "Polish: rewrite HomePage with editorial sections (hero, pillars, services, fleet, reviews, promise, atlanta, instagram, final CTA)",
-    "status": "completed"
-  },
-  {
-    "content": "Polish: refine Header (luxury kerning, brand crest balance)",
-    "status": "completed"
-  },
-  {
-    "content": "Polish: verify mobile responsiveness + screenshot pass",
-    "status": "completed"
-  },
-  {
-    "content": "Polish: replace yellow Mercedes with black luxury vehicle for fleet showcase",
+    "content": "Verify pages with screenshot tool: Home, Fleet, Experience, Reviews, Booking, Contact (zero broken images)",
     "status": "completed"
   }
 ]

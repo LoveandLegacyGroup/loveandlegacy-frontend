@@ -134,12 +134,19 @@ export const IMAGES = {
   atlantaNight:     '/brand/sprinter_interior.jpg',
   atlantaBuckhead:  '/brand/tahoe_interior.jpg',
   atlantaMidtown:   '/brand/sprinter_exterior.jpg',
-  // Chauffeur / professional — ecosystem chauffeur with sunglasses
-  chauffeur:        '/brand/eco_chauffeur_sunglass.jpg',
-  chauffeurDoor:    '/brand/eco_chauffeur_sunglass.jpg',
-  // Service pages — use ecosystem imagery where appropriate
-  hotelValet:       '/brand/eco_escalade_hotel.jpg',
-  protection:       '/brand/eco_chauffeur_sunglass.jpg',
+  // ---- New uploaded standalone brand art (the only non-vehicle photography we use) ----
+  artHeroTahoe:     '/brand/art_hero_tahoe.jpg',
+  artDiscreet:      '/brand/art_discreet.jpg',
+  artJetBrand:      '/brand/art_jet_brand.jpg',
+  artLogoHoriz:     '/brand/art_logo_horiz.jpg',
+  artProtection:    '/brand/art_protection.jpg',
+
+  // Chauffeur / professional — backed by Tahoe portrait + wide for hero safety
+  chauffeur:        '/brand/tahoe_exterior.jpg',
+  chauffeurDoor:    '/brand/tahoe_exterior_landscape.jpg',
+  // Service pages — backed by uploaded brand arts + Tahoe/Sprinter only
+  hotelValet:       '/brand/tahoe_exterior_landscape.jpg',
+  protection:       '/brand/art_protection.jpg',
   production:       '/brand/sprinter_exterior.jpg',
   event:            '/brand/sprinter_interior.jpg',
   corporate:        '/brand/tahoe_exterior_landscape.jpg',
@@ -151,19 +158,9 @@ export const IMAGES = {
   tahoeExecutive:   '/brand/tahoe_exterior_landscape.jpg',
   tahoeInMotion:    '/brand/tahoe_exterior.jpg',
   chauffeurVip:     '/brand/tahoe_interior.jpg',
-  jetPrivate:       '/brand/sprinter_exterior.jpg',
+  jetPrivate:       '/brand/art_jet_brand.jpg',
   arrivalLobby:     '/brand/tahoe_exterior.jpg',
   insideAtlanta:    '/brand/sprinter_interior.jpg',
   luxuryDuffel:     '/brand/sprinter_interior.jpg',
-  luxuryLeather:    '/brand/eco_cognac_leather.jpg',
-
-  // ---- Additional brand storytelling tiles (from ecosystem 3) ----
-  ecoRedCarpetSUV:     '/brand/eco_red_carpet_suv.jpg',
-  ecoCoupleAtJet:      '/brand/eco_couple_at_jet.jpg',
-  ecoCoupleWalking:    '/brand/eco_couple_walking.jpg',
-  ecoEscaladeHotel:    '/brand/eco_escalade_hotel.jpg',
-  ecoCognacLeather:    '/brand/eco_cognac_leather.jpg',
-  ecoChauffeurEx:      '/brand/eco_chauffeur_sunglass.jpg',
-  ecoSecurityJet:      '/brand/eco_security_jet.jpg',
-  ecoSecurityHotel:    '/brand/eco_security_hotel.jpg',
+  luxuryLeather:    '/brand/tahoe_interior.jpg',
 };

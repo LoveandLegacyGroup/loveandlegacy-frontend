@@ -15,9 +15,9 @@ export default function ExecutiveProtectionPage() {
         title: 'The highest standard',
         accent: 'of protection in motion.',
         subhead: 'Executive Protection · Secure Transportation · Confidential Logistics',
-        image: IMAGES.ecoChauffeurEx,
+        image: IMAGES.artProtection,
       }}
-      image={IMAGES.ecoSecurityHotel}
+      image={IMAGES.artDiscreet}
       intro={{
         overline: 'Executive Protection',
         heading: 'More than transportation.',

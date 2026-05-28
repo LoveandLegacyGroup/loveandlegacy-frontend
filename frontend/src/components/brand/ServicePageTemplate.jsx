@@ -27,8 +27,8 @@ export const ServicePageTemplate = ({
     <section className="ll-section bg-[var(--ll-ink)]">
       <div className="ll-container grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <FadeUp className={`lg:col-span-7 ${reverseImage ? 'order-2 lg:order-2' : 'order-2 lg:order-1'}`}>
-          <div className="relative overflow-hidden rounded-lg ll-img-overlay aspect-[16/10]">
-            <img src={image || IMAGES.fleetMain} alt="" className="w-full h-full object-cover" style={{ filter: 'saturate(0.85) contrast(1.05)' }} />
+          <div className="relative overflow-hidden rounded-lg ll-img-overlay aspect-[16/10] bg-[#0A0A0C]">
+            <img src={image || IMAGES.fleetMain} alt="" className="w-full h-full object-contain" style={{ filter: 'saturate(0.85) contrast(1.05)' }} />
           </div>
         </FadeUp>
         <FadeUp className={`lg:col-span-5 ${reverseImage ? 'order-1 lg:order-1' : 'order-1 lg:order-2'}`}>

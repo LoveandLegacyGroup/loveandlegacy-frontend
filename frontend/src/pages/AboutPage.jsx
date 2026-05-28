@@ -18,7 +18,7 @@ export default function AboutPage() {
   return (
     <div data-testid="page-about">
       <SEO title="About — Love & Legacy Executive Transportation" description="Founded by Dontay Bates. 20+ years of executive protection and luxury client services. Built in Atlanta." />
-      <PageHero overline="— About" title="Driven by" accent="purpose." subhead={BRAND.positioning} image={IMAGES.ecoChauffeurEx} />
+      <PageHero overline="— About" title="Driven by" accent="purpose." subhead={BRAND.positioning} image={IMAGES.tahoeExteriorWide} />
       <SectionRule />
 
       <section className="ll-section bg-[var(--ll-ink)]">
@@ -57,6 +57,28 @@ export default function AboutPage() {
       </section>
 
       <SectionRule />
+
+      {/* Brand Plates — uploaded standalone art shown at native ratio with object-contain (no cropping) */}
+      <section className="bg-[var(--ll-ink)] py-12">
+        <div className="ll-container">
+          <FadeUp className="text-center max-w-2xl mx-auto mb-10">
+            <div className="overline">— The Mark</div>
+            <h2 className="font-serif text-2xl sm:text-3xl mt-4 leading-[1.15]">Discretion is the design.</h2>
+          </FadeUp>
+          <StaggerGroup className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <FadeUp>
+              <div className="relative overflow-hidden aspect-[4/5] bg-[#0A0A0C] border border-[rgba(212,175,55,0.10)]">
+                <img src={IMAGES.artHeroTahoe} alt="Love & Legacy — Tahoe brand plate" className="w-full h-full object-contain" />
+              </div>
+            </FadeUp>
+            <FadeUp>
+              <div className="relative overflow-hidden aspect-[4/5] bg-[#0A0A0C] border border-[rgba(212,175,55,0.10)]">
+                <img src={IMAGES.artLogoHoriz} alt="Love & Legacy — horizontal mark" className="w-full h-full object-contain" />
+              </div>
+            </FadeUp>
+          </StaggerGroup>
+        </div>
+      </section>
 
       <section className="ll-section bg-[var(--ll-ink)] text-center">
         <div className="ll-container">

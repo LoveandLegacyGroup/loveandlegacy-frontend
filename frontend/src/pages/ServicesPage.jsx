@@ -11,27 +11,28 @@ import { SERVICES, IMAGES, BRAND } from '@/constants/brand';
 const ICONS = [Plane, Briefcase, Crown, ShieldCheck, Sparkles, Star];
 
 const SHOWCASE = [
-  { src: IMAGES.ecoChauffeurEx,   label: 'Discreet Chauffeur Presence' },
-  { src: IMAGES.ecoCoupleWalking, label: 'Executive Arrival' },
-  { src: IMAGES.ecoCognacLeather, label: 'Premium Luggage & Leather' },
-  { src: IMAGES.ecoSecurityJet,   label: 'Private Aviation' },
+  { src: IMAGES.artDiscreet,       label: 'Discreet Chauffeur Presence' },
+  { src: IMAGES.tahoeExteriorWide, label: 'Executive Arrival' },
+  { src: IMAGES.tahoeInterior,     label: 'Premium Cabin' },
+  { src: IMAGES.artJetBrand,       label: 'Private Aviation' },
 ];
 
 export default function ServicesPage() {
   return (
     <div data-testid="page-services">
       <SEO title="Services — Love & Legacy Executive Transportation" description="Atlanta's premium executive transportation services: airport transfers, executive rides, VIP events, executive protection, production, and corporate accounts." />
-      <PageHero overline="— Services" title="Every journey." accent="Every standard." subhead="Airport · Executive · VIP · Protection · Production · Corporate" image={IMAGES.ecoEscaladeHotel} />
+      <PageHero overline="— Services" title="Every journey." accent="Every standard." subhead="Airport · Executive · VIP · Protection · Production · Corporate" image={IMAGES.tahoeExteriorWide} />
       <SectionRule />
 
-      {/* Editorial visual strip from the ecosystem */}
+      {/* Editorial visual strip — uses object-contain on charcoal so no image is cropped */}
       <section className="bg-[var(--ll-ink)] py-10">
         <div className="ll-container">
-          <StaggerGroup className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          <StaggerGroup className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
             {SHOWCASE.map((s) => (
               <FadeUp key={s.label}>
-                <div className="relative aspect-[4/5] overflow-hidden ll-img-overlay group border border-[rgba(212,175,55,0.10)]">
-                  <img src={s.src} alt={s.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="relative aspect-[16/10] overflow-hidden group border border-[rgba(212,175,55,0.10)] bg-[#0A0A0C]">
+                  <img src={s.src} alt={s.label} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.03]" />
+                  <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(7,7,10,0) 60%, rgba(7,7,10,0.85) 100%)' }} />
                   <div className="absolute left-4 bottom-4 z-10 text-[10px] tracking-[0.28em] uppercase text-[var(--ll-champagne)]">{s.label}</div>
                 </div>
               </FadeUp>

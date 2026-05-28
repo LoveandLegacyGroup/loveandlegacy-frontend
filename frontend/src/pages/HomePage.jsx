@@ -34,18 +34,18 @@ const FLEET_SPECS = [
 
 const ATLANTA_TILES = [
   { src: IMAGES.tahoeExteriorWide, label: 'Executive SUV' },
-  { src: IMAGES.ecoChauffeurEx,    label: 'Executive Protection' },
-  { src: IMAGES.ecoEscaladeHotel,  label: 'Hotel Arrival' },
+  { src: IMAGES.tahoeInterior,     label: 'Executive Cabin' },
+  { src: IMAGES.sprinterExterior,  label: 'Group Movement' },
   { src: IMAGES.sprinterInterior,  label: 'VIP Lounge' },
 ];
 
 const INSTAGRAM_TILES = [
-  IMAGES.ecoRedCarpetSUV,    // Red carpet SUV arrival
-  IMAGES.tahoeExteriorWide,  // Black Tahoe
-  IMAGES.ecoCoupleAtJet,     // Couple at private jet
-  IMAGES.ecoChauffeurEx,     // Chauffeur with sunglasses (executive protection)
-  IMAGES.sprinterInterior,   // Sprinter ambient lounge
-  IMAGES.ecoCognacLeather,   // Premium leather detail
+  IMAGES.tahoeExteriorWide,  // Black Tahoe wide
+  IMAGES.tahoeInterior,      // Executive cabin
+  IMAGES.tahoeExterior,      // Tahoe portrait
+  IMAGES.sprinterExterior,   // Sprinter exterior
+  IMAGES.sprinterInterior,   // Sprinter lounge
+  IMAGES.tahoeExteriorWide,  // Tahoe wide encore
 ];
 
 const heroWordVariants = {
