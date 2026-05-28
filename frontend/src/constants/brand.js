@@ -9,8 +9,11 @@ export const BRAND = {
   email: 'Dontay.bates@loveandlegacy.group',
   instagram: '@loveandlegacy.transport',
   instagramUrl: 'https://instagram.com/loveandlegacy.transport',
+  facebookUrl: 'https://facebook.com/loveandlegacy.transport',
   tiktokUrl: 'https://tiktok.com/@loveandlegacy.transport',
-  // HubSpot form \u2014 primary booking / inquiry funnel
+  googleReviewsUrl: 'https://g.page/r/love-legacy/review',
+  positioning: 'Executive Transportation · Executive Protection · Concierge Logistics · VIP Travel',
+  // HubSpot form — primary booking / inquiry funnel
   hubspotForm: 'https://42nbzg.share-na2.hsforms.com/2jprTBBhsS5C57wwBHYt5yw',
 };
 
@@ -131,12 +134,12 @@ export const IMAGES = {
   atlantaNight:     '/brand/sprinter_interior.jpg',
   atlantaBuckhead:  '/brand/tahoe_interior.jpg',
   atlantaMidtown:   '/brand/sprinter_exterior.jpg',
-  // Chauffeur / professional — Tahoe interior (premium passenger view)
-  chauffeur:        '/brand/tahoe_interior.jpg',
-  chauffeurDoor:    '/brand/tahoe_exterior.jpg',
-  // Service pages
-  hotelValet:       '/brand/tahoe_exterior.jpg',
-  protection:       '/brand/tahoe_exterior_landscape.jpg',
+  // Chauffeur / professional — ecosystem chauffeur with sunglasses
+  chauffeur:        '/brand/eco_chauffeur_sunglass.jpg',
+  chauffeurDoor:    '/brand/eco_chauffeur_sunglass.jpg',
+  // Service pages — use ecosystem imagery where appropriate
+  hotelValet:       '/brand/eco_escalade_hotel.jpg',
+  protection:       '/brand/eco_chauffeur_sunglass.jpg',
   production:       '/brand/sprinter_exterior.jpg',
   event:            '/brand/sprinter_interior.jpg',
   corporate:        '/brand/tahoe_exterior_landscape.jpg',

@@ -7,30 +7,30 @@ export default function ExecutiveProtectionPage() {
     <ServicePageTemplate
       meta={{
         title: 'Executive Protection Transportation | Love & Legacy ATL',
-        description: 'Discreet executive protection transportation in Atlanta. Certified, confidential, professional. For those who require more.',
+        description: 'Discreet executive protection transportation in Atlanta. Certified, confidential, professional. Quietly excellent.',
       }}
       hero={{
         crumb: 'Executive Protection',
-        overline: 'CERTIFIED • CONFIDENTIAL • DISCREET',
-        title: 'The Highest Standard',
-        accent: 'Of Protection in Motion.',
-        subhead: 'Executive Protection • Secure Transportation • Confidential Logistics',
-        image: IMAGES.protection,
+        overline: 'CERTIFIED · CONFIDENTIAL · DISCREET',
+        title: 'The highest standard',
+        accent: 'of protection in motion.',
+        subhead: 'Executive Protection · Secure Transportation · Confidential Logistics',
+        image: IMAGES.ecoChauffeurEx,
       }}
-      image={IMAGES.protection}
+      image={IMAGES.ecoSecurityHotel}
       intro={{
         overline: 'Executive Protection',
-        heading: 'More Than Transportation.',
-        body: 'For clients who require more than transportation — who require a trained, discreet professional capable of ensuring their safety and privacy at every moment.',
+        heading: 'More than transportation.',
+        body: 'For clients who require more than transportation — who require a trained, discreet professional capable of ensuring their safety and privacy at every moment. Our protection presence is low-profile, professional, and quietly excellent.',
       }}
       signals={{
         heading: 'Protection Standards',
         items: [
           'Executive protection certified and trained',
-          'Advance route planning and security assessment',
+          'Advance route planning and risk assessment',
           'Strict non-disclosure — client identity and movement never disclosed',
-          'Available for individual details, team principals, and high-profile events',
-          'Trained in low-profile professional presentation',
+          'Available for principals, family details, and high-profile engagements',
+          'Low-profile professional presentation — never tactical, never visible',
           'Inquiries handled with the utmost confidentiality',
         ],
       }}

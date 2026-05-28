@@ -2,15 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/brand/SEO';
 import { PageHero } from '@/components/brand/PageHero';
-import { FadeUp } from '@/components/brand/FadeUp';
+import { FadeUp, StaggerGroup } from '@/components/brand/FadeUp';
 import { SectionRule } from '@/components/brand/SectionRule';
-import {IMAGES, BRAND} from '@/constants/brand';
+import { BRAND, IMAGES } from '@/constants/brand';
+import { ShieldCheck, Crown, Sparkles, Briefcase } from 'lucide-react';
+
+const PILLARS = [
+  { Icon: Briefcase, title: 'Executive Transportation', body: 'Premium chauffeured movement for executives, C-suite, and visiting principals.' },
+  { Icon: ShieldCheck, title: 'Executive Protection', body: 'Discreet, certified protection presence for principals who require quiet excellence.' },
+  { Icon: Crown, title: 'Concierge Logistics', body: 'Coordinated multi-stop logistics for events, travel, and family movement.' },
+  { Icon: Sparkles, title: 'VIP Travel', body: 'Airport, hotel, and venue arrival experiences engineered for the standard you hold.' },
+];
 
 export default function AboutPage() {
   return (
     <div data-testid="page-about">
       <SEO title="About — Love & Legacy Executive Transportation" description="Founded by Dontay Bates. 20+ years of executive protection and luxury client services. Built in Atlanta." />
-      <PageHero overline="— About" title="Driven by" accent="Purpose." subhead="Founded by Dontay Bates • Built in Atlanta" image={IMAGES.chauffeur} />
+      <PageHero overline="— About" title="Driven by" accent="purpose." subhead={BRAND.positioning} image={IMAGES.ecoChauffeurEx} />
       <SectionRule />
 
       <section className="ll-section bg-[var(--ll-ink)]">
@@ -21,6 +29,30 @@ export default function AboutPage() {
             <p className="mt-6 text-white/85 leading-8 text-lg">More than transportation, Love &amp; Legacy represents discretion, professionalism, reliability, and presence.</p>
             <p className="mt-8 font-serif italic text-[var(--ll-gold)] text-2xl">“Because true luxury is not loud. It’s how you move.”</p>
           </FadeUp>
+        </div>
+      </section>
+
+      <SectionRule />
+
+      <section className="ll-section bg-[var(--ll-ink-2)]">
+        <div className="ll-container">
+          <FadeUp className="text-center max-w-2xl mx-auto">
+            <div className="overline">— What We Do</div>
+            <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl mt-5 leading-[1.05] text-balance">Four disciplines. <span className="italic font-light text-[var(--ll-gold)]">One standard.</span></h2>
+          </FadeUp>
+          <StaggerGroup className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {PILLARS.map(p => (
+              <FadeUp key={p.title}>
+                <div className="rounded-lg bg-[var(--ll-ink)] border border-[rgba(246,241,230,0.08)] p-7 h-full hover:border-[rgba(212,175,55,0.30)] transition-colors duration-500">
+                  <div className="h-12 w-12 rounded-full bg-[var(--ll-purple)] border border-[rgba(212,175,55,0.40)] flex items-center justify-center">
+                    <p.Icon size={20} className="text-[var(--ll-gold)]" />
+                  </div>
+                  <h3 className="font-serif text-xl mt-5 leading-tight">{p.title}</h3>
+                  <p className="mt-3 text-[13.5px] text-white/72 leading-7">{p.body}</p>
+                </div>
+              </FadeUp>
+            ))}
+          </StaggerGroup>
         </div>
       </section>
 
