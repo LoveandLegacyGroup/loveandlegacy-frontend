@@ -1,54 +1,58 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
+import React from 'react';
+import '@/App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'sonner';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import { Layout } from '@/components/brand/Layout';
+import HomePage from '@/pages/HomePage';
+import ServicesPage from '@/pages/ServicesPage';
+import AirportTransfersPage from '@/pages/services/AirportTransfersPage';
+import ExecutiveTransportationPage from '@/pages/services/ExecutiveTransportationPage';
+import VipEventPage from '@/pages/services/VipEventPage';
+import ExecutiveProtectionPage from '@/pages/services/ExecutiveProtectionPage';
+import ProductionTransportationPage from '@/pages/services/ProductionTransportationPage';
+import CorporateAccountsPage from '@/pages/services/CorporateAccountsPage';
+import FleetPage from '@/pages/FleetPage';
+import ExperiencePage from '@/pages/ExperiencePage';
+import ReviewsPage from '@/pages/ReviewsPage';
+import AboutPage from '@/pages/AboutPage';
+import BookPage from '@/pages/BookPage';
+import ContactPage from '@/pages/ContactPage';
+import CorporateInquiryPage from '@/pages/CorporateInquiryPage';
+import ThankYouPage from '@/pages/ThankYouPage';
+import PrivacyPage from '@/pages/PrivacyPage';
+import TermsPage from '@/pages/TermsPage';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/airport-transfers" element={<AirportTransfersPage />} />
+            <Route path="/services/executive-transportation" element={<ExecutiveTransportationPage />} />
+            <Route path="/services/vip-event-transportation" element={<VipEventPage />} />
+            <Route path="/services/executive-protection" element={<ExecutiveProtectionPage />} />
+            <Route path="/services/production-transportation" element={<ProductionTransportationPage />} />
+            <Route path="/services/corporate-accounts" element={<CorporateAccountsPage />} />
+            <Route path="/fleet" element={<FleetPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/reviews" element={<ReviewsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/book" element={<BookPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/corporate-inquiry" element={<CorporateInquiryPage />} />
+            <Route path="/thank-you" element={<ThankYouPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPage />} />
+            <Route path="/terms-of-service" element={<TermsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
+      <Toaster theme="dark" position="top-center" toastOptions={{ style: { background: '#0B0B0B', color: '#F6F1E6', border: '1px solid rgba(212,175,55,0.30)' } }} />
     </div>
   );
 }
