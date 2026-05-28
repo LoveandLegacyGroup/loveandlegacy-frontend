@@ -5,7 +5,7 @@ import { SEO } from '@/components/brand/SEO';
 import { PageHero } from '@/components/brand/PageHero';
 import { FadeUp, StaggerGroup } from '@/components/brand/FadeUp';
 import { SectionRule } from '@/components/brand/SectionRule';
-import { REVIEWS, IMAGES } from '@/constants/brand';
+import {REVIEWS, IMAGES, BRAND} from '@/constants/brand';
 
 export default function ReviewsPage() {
   return (
@@ -49,7 +49,7 @@ export default function ReviewsPage() {
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">Ready to <span className="text-[var(--ll-gold)]">Experience It?</span></h2>
             <p className="mt-5 text-white/80">Reserve your ride or share your own.</p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/book" className="ll-cta-primary">Book Your Ride</Link>
+              <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary">Book Your Ride</a>
               <a href="https://g.page/r/love-legacy/review" target="_blank" rel="noreferrer" className="ll-cta-ghost">Leave a Review</a>
             </div>
           </FadeUp>

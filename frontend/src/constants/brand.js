@@ -10,6 +10,8 @@ export const BRAND = {
   instagram: '@loveandlegacy.transport',
   instagramUrl: 'https://instagram.com/loveandlegacy.transport',
   tiktokUrl: 'https://tiktok.com/@loveandlegacy.transport',
+  // HubSpot form \u2014 primary booking / inquiry funnel
+  hubspotForm: 'https://42nbzg.share-na2.hsforms.com/2jprTBBhsS5C57wwBHYt5yw',
 };
 
 export const SERVICES = [
@@ -150,5 +152,15 @@ export const IMAGES = {
   arrivalLobby:     '/brand/tahoe_exterior.jpg',
   insideAtlanta:    '/brand/sprinter_interior.jpg',
   luxuryDuffel:     '/brand/sprinter_interior.jpg',
-  luxuryLeather:    '/brand/tahoe_interior.jpg',
+  luxuryLeather:    '/brand/eco_cognac_leather.jpg',
+
+  // ---- Additional brand storytelling tiles (from ecosystem 3) ----
+  ecoRedCarpetSUV:     '/brand/eco_red_carpet_suv.jpg',
+  ecoCoupleAtJet:      '/brand/eco_couple_at_jet.jpg',
+  ecoCoupleWalking:    '/brand/eco_couple_walking.jpg',
+  ecoEscaladeHotel:    '/brand/eco_escalade_hotel.jpg',
+  ecoCognacLeather:    '/brand/eco_cognac_leather.jpg',
+  ecoChauffeurEx:      '/brand/eco_chauffeur_sunglass.jpg',
+  ecoSecurityJet:      '/brand/eco_security_jet.jpg',
+  ecoSecurityHotel:    '/brand/eco_security_hotel.jpg',
 };

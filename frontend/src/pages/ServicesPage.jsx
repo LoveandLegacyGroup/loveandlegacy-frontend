@@ -6,7 +6,7 @@ import { PageHero } from '@/components/brand/PageHero';
 import { FadeUp, StaggerGroup } from '@/components/brand/FadeUp';
 import { SectionRule } from '@/components/brand/SectionRule';
 import { ServiceTile } from '@/components/brand/ServiceTile';
-import { SERVICES, IMAGES } from '@/constants/brand';
+import {SERVICES, IMAGES, BRAND} from '@/constants/brand';
 
 const ICONS = [Plane, Briefcase, Crown, ShieldCheck, Sparkles, Star];
 
@@ -45,7 +45,7 @@ export default function ServicesPage() {
             ))}
           </StaggerGroup>
           <FadeUp className="mt-16 text-center">
-            <Link to="/book" className="ll-cta-primary">Reserve Your Experience</Link>
+            <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary">Reserve Your Experience</a>
           </FadeUp>
         </div>
       </section>

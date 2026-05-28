@@ -34,18 +34,18 @@ const FLEET_SPECS = [
 
 const ATLANTA_TILES = [
   { src: IMAGES.tahoeExteriorWide, label: 'Executive SUV' },
-  { src: IMAGES.tahoeInterior,     label: 'Premium Cabin' },
-  { src: IMAGES.sprinterExterior,  label: 'Group Transport' },
+  { src: IMAGES.ecoChauffeurEx,    label: 'Executive Protection' },
+  { src: IMAGES.ecoEscaladeHotel,  label: 'Hotel Arrival' },
   { src: IMAGES.sprinterInterior,  label: 'VIP Lounge' },
 ];
 
 const INSTAGRAM_TILES = [
-  IMAGES.tahoeExteriorWide,   // Black Tahoe (executive presence)
-  IMAGES.sprinterInterior,    // Sprinter purple ambient lounge
-  IMAGES.tahoeInterior,       // Tahoe premium cabin
-  IMAGES.sprinterExterior,    // Black Sprinter (group transport)
-  IMAGES.tahoeExterior,       // Tahoe front 3/4
-  IMAGES.sprinterInterior,    // Sprinter again (different framing on tile)
+  IMAGES.ecoRedCarpetSUV,    // Red carpet SUV arrival
+  IMAGES.tahoeExteriorWide,  // Black Tahoe
+  IMAGES.ecoCoupleAtJet,     // Couple at private jet
+  IMAGES.ecoChauffeurEx,     // Chauffeur with sunglasses (executive protection)
+  IMAGES.sprinterInterior,   // Sprinter ambient lounge
+  IMAGES.ecoCognacLeather,   // Premium leather detail
 ];
 
 const heroWordVariants = {
@@ -101,7 +101,7 @@ export default function HomePage() {
           </motion.p>
 
           <motion.div initial="hidden" animate="show" custom={4.8} variants={heroWordVariants} className="mt-14 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-            <Link to="/book" className="ll-cta-primary" data-testid="home-hero-reserve-button">Reserve Your Experience</Link>
+            <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary" data-testid="home-hero-reserve-button">Reserve Your Experience</a>
             <Link to="/fleet" className="ll-cta-ghost" data-testid="home-hero-view-fleet-button">View the Fleet</Link>
           </motion.div>
         </div>
@@ -274,7 +274,7 @@ export default function HomePage() {
 
               <div className="mt-12 flex flex-wrap gap-5">
                 <Link to="/fleet" className="ll-cta-primary">View the Fleet</Link>
-                <Link to="/book" className="ll-cta-ghost">Reserve</Link>
+                <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-ghost">Reserve</a>
               </div>
             </FadeUp>
           </div>
@@ -469,10 +469,10 @@ export default function HomePage() {
             </h2>
             <p className="mt-10 text-[11px] tracking-[0.30em] uppercase text-[var(--ll-champagne)]">Available 24 Hours · 7 Days · Every Occasion</p>
             <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-5">
-              <Link to="/book" className="ll-cta-primary">Reserve Your Experience</Link>
+              <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary">Reserve Your Experience</a>
               <a href={`tel:${BRAND.phoneTel}`} className="ll-cta-ghost inline-flex items-center gap-2"><Phone size={13} /> {BRAND.phone}</a>
             </div>
-            <Link to="/corporate-inquiry" className="mt-9 inline-flex ll-link-gold">Corporate Inquiry <ChevronRight size={14} /></Link>
+            <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex ll-link-gold">Corporate Inquiry <ChevronRight size={14} /></a>
           </FadeUp>
         </div>
       </section>

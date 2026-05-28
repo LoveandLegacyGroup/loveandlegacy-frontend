@@ -5,7 +5,7 @@ import { SEO } from '@/components/brand/SEO';
 import { PageHero } from '@/components/brand/PageHero';
 import { FadeUp, StaggerGroup } from '@/components/brand/FadeUp';
 import { SectionRule } from '@/components/brand/SectionRule';
-import { IMAGES } from '@/constants/brand';
+import {IMAGES, BRAND} from '@/constants/brand';
 
 const VEHICLES = [
   {
@@ -84,7 +84,7 @@ export default function FleetPage() {
                   </dl>
 
                   <div className="mt-10 flex flex-wrap gap-4">
-                    <Link to="/book" className="ll-cta-primary">{v.cta}</Link>
+                    <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary">{v.cta}</a>
                   </div>
                 </FadeUp>
               </div>
@@ -116,7 +116,7 @@ export default function FleetPage() {
               From a private airport pickup to a multi-vehicle gala arrival, our fleet is positioned for the journey — not the spreadsheet.
             </p>
             <div className="mt-10">
-              <Link to="/book" className="ll-cta-primary">Reserve Your Experience <ChevronRight size={14} className="ml-2" /></Link>
+              <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary">Reserve Your Experience <ChevronRight size={14} className="ml-2" /></a>
             </div>
           </FadeUp>
         </div>

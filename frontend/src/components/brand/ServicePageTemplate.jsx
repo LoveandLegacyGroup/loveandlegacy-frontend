@@ -36,7 +36,7 @@ export const ServicePageTemplate = ({
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] mt-4 leading-[1.15] text-balance">{intro.heading}</h2>
           <p className="mt-6 text-white/80 leading-8">{intro.body}</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link to="/book" className="ll-cta-primary">{cta.primaryLabel || 'Reserve Now'}</Link>
+            <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary">{cta.primaryLabel || 'Reserve Now'}</a>
             <a href={`tel:${BRAND.phoneTel}`} className="ll-cta-ghost inline-flex items-center gap-2"><Phone size={14} /> {BRAND.phone}</a>
           </div>
         </FadeUp>
@@ -96,7 +96,7 @@ export const ServicePageTemplate = ({
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-balance">{cta.heading || 'Ready to Reserve?'}</h2>
           <p className="mt-5 text-white/80">{cta.body || 'Confirmed within two hours. Available 24/7.'}</p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/book" className="ll-cta-primary">{cta.primaryLabel || 'Reserve Your Experience'}</Link>
+            <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary">{cta.primaryLabel || 'Reserve Your Experience'}</a>
             <Link to="/services" className="ll-cta-ghost">View All Services <ChevronRight size={14} className="ml-2" /></Link>
           </div>
         </FadeUp>

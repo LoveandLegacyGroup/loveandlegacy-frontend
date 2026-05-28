@@ -4,7 +4,7 @@ import { SEO } from '@/components/brand/SEO';
 import { PageHero } from '@/components/brand/PageHero';
 import { FadeUp } from '@/components/brand/FadeUp';
 import { SectionRule } from '@/components/brand/SectionRule';
-import { IMAGES } from '@/constants/brand';
+import {IMAGES, BRAND} from '@/constants/brand';
 
 export default function AboutPage() {
   return (
@@ -29,7 +29,7 @@ export default function AboutPage() {
       <section className="ll-section bg-[var(--ll-ink)] text-center">
         <div className="ll-container">
           <FadeUp>
-            <Link to="/book" className="ll-cta-primary">Begin Your Experience</Link>
+            <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary">Begin Your Experience</a>
           </FadeUp>
         </div>
       </section>

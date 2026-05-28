@@ -5,7 +5,7 @@ import { SEO } from '@/components/brand/SEO';
 import { PageHero } from '@/components/brand/PageHero';
 import { FadeUp, StaggerGroup } from '@/components/brand/FadeUp';
 import { SectionRule } from '@/components/brand/SectionRule';
-import { IMAGES } from '@/constants/brand';
+import {IMAGES, BRAND} from '@/constants/brand';
 
 const PILLARS = [
   { icon: Clock, title: '10 Minutes Early. Always.', body: 'Our drivers arrive ten minutes before scheduled pickup. Every run. Without exception.' },
@@ -97,7 +97,7 @@ export default function ExperiencePage() {
             <SectionRule ornamental className="mb-8" />
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-balance">Your Journey. <span className="text-[var(--ll-gold)]">Our Priority.</span></h2>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/book" className="ll-cta-primary">Experience It Yourself</Link>
+              <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-primary">Experience It Yourself</a>
               <Link to="/reviews" className="ll-cta-ghost">Read Our Reviews</Link>
             </div>
           </FadeUp>

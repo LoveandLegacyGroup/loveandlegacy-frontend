@@ -71,9 +71,9 @@ export const Header = () => {
           >
             <Phone size={13} /> {BRAND.phone}
           </a>
-          <Link to="/book" className="hidden md:inline-flex ll-cta-primary !h-11 !px-6 !text-[10.5px]" data-testid="nav-reserve-button">
+          <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex ll-cta-primary !h-11 !px-6 !text-[10.5px]" data-testid="nav-reserve-button">
             Reserve
-          </Link>
+          </a>
           <button
             type="button"
             className="lg:hidden inline-flex items-center justify-center w-11 h-11 border border-[rgba(212,175,55,0.35)] text-[var(--ll-gold)]"
@@ -115,7 +115,7 @@ export const Header = () => {
               <div className="ll-rule my-5" />
               <a href={`tel:${BRAND.phoneTel}`} className="px-4 py-3 text-[12px] tracking-[0.24em] uppercase text-[var(--ll-champagne)]">{BRAND.phone}</a>
               <Link to="/book" className="ll-cta-primary mx-3 mt-2">Reserve Your Experience</Link>
-              <Link to="/corporate-inquiry" className="ll-cta-ghost mx-3 mt-3">Corporate Inquiry</Link>
+              <a href={BRAND.hubspotForm} target="_blank" rel="noopener noreferrer" className="ll-cta-ghost mx-3 mt-3">Open HubSpot Form</a>
             </nav>
           </aside>
         </div>
