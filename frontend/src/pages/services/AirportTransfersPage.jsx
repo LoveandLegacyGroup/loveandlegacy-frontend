@@ -21,7 +21,7 @@ export default function AirportTransfersPage() {
       intro={{
         overline: 'Airport Transfers',
         heading: 'Curbside Presence. Zero Friction.',
-        body: "Professional airport transfers that track your flight, wait for your landing, and ensure you move through one of the world's busiest airports with zero friction — every single time.",
+        body: "Professional airport transfers that track your flight, wait for your landing, and ensure you move through one of the world’s busiest airports with zero friction — every single time.",
       }}
       signals={{
         heading: 'Why Love & Legacy for Airports',

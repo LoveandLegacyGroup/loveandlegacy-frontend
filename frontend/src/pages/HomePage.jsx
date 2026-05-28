@@ -24,8 +24,8 @@ const PILLARS = [
 ];
 
 const FLEET_SPECS = [
-  ['Vehicle', '2021 Chevrolet Tahoe High Country'],
-  ['Capacity', 'Up to 6 guests'],
+  ['Executive SUV', '2021 Chevrolet Tahoe High Country · up to 6 guests'],
+  ['Group / VIP', 'Black Mercedes-Benz Sprinter · up to 14 guests'],
   ['Interior', 'Premium leather · Ambient lighting · Privacy tint'],
   ['Comfort', 'Climate-controlled · Premium audio · Wireless charge'],
   ['Hospitality', 'Chilled water · Phone chargers · Discreet service'],
@@ -33,19 +33,19 @@ const FLEET_SPECS = [
 ];
 
 const ATLANTA_TILES = [
-  { src: IMAGES.tahoeNight,    label: 'Downtown · Night' },
-  { src: IMAGES.tahoeInMotion, label: 'In Motion' },
-  { src: IMAGES.chauffeurVip,  label: 'Curbside' },
-  { src: IMAGES.jetPrivate,    label: 'Private Aviation' },
+  { src: IMAGES.tahoeExteriorWide, label: 'Executive SUV' },
+  { src: IMAGES.tahoeInterior,     label: 'Premium Cabin' },
+  { src: IMAGES.sprinterExterior,  label: 'Group Transport' },
+  { src: IMAGES.sprinterInterior,  label: 'VIP Lounge' },
 ];
 
 const INSTAGRAM_TILES = [
-  IMAGES.tahoeNight,       // Black Tahoe with Atlanta skyline
-  IMAGES.chauffeurVip,     // Chauffeur opening door
-  IMAGES.jetPrivate,       // Private jet
-  IMAGES.luxuryDuffel,     // Premium black leather duffel luggage
-  IMAGES.tahoeExecutive,   // Tahoe with executive at jet
-  IMAGES.tahoeInMotion,    // Tahoe in motion
+  IMAGES.tahoeExteriorWide,   // Black Tahoe (executive presence)
+  IMAGES.sprinterInterior,    // Sprinter purple ambient lounge
+  IMAGES.tahoeInterior,       // Tahoe premium cabin
+  IMAGES.sprinterExterior,    // Black Sprinter (group transport)
+  IMAGES.tahoeExterior,       // Tahoe front 3/4
+  IMAGES.sprinterInterior,    // Sprinter again (different framing on tile)
 ];
 
 const heroWordVariants = {
@@ -66,7 +66,7 @@ export default function HomePage() {
     <div data-testid="page-home" className="bg-[var(--ll-ink)]">
       <SEO
         title="Love & Legacy — Atlanta Executive Transportation"
-        description="Atlanta's premium executive transportation. Airport transfers, VIP logistics & chauffeur service. Discretion. Reliability. Presence."
+        description="Atlanta’s premium executive transportation. Airport transfers, VIP logistics & chauffeur service. Discretion. Reliability. Presence."
       />
 
       {/* ============================================================
@@ -233,10 +233,10 @@ export default function HomePage() {
               <div className="relative overflow-hidden aspect-[16/11] bg-[var(--ll-ink-2)]">
                 <div className="absolute inset-0 ll-kenburns">
                   <img
-                    src={IMAGES.fleetMain}
-                    alt="2021 Chevrolet Tahoe High Country, black on black"
+                    src={IMAGES.tahoeExteriorWide}
+                    alt="Black Chevrolet Tahoe High Country — Love & Legacy executive fleet"
                     className="w-full h-full object-cover"
-                    style={{ filter: 'saturate(0.82) contrast(1.10) brightness(0.92)' }}
+                    style={{ filter: 'saturate(0.88) contrast(1.06) brightness(0.94)' }}
                   />
                 </div>
                 <div className="absolute inset-0 ll-img-overlay-strong" />
@@ -247,7 +247,7 @@ export default function HomePage() {
                 <div className="absolute left-6 bottom-6 right-6 flex items-end justify-between">
                   <div>
                     <div className="text-[10px] tracking-[0.30em] uppercase text-[var(--ll-champagne)] opacity-80">Atlanta · ATL</div>
-                    <div className="font-serif italic text-[var(--ll-gold)] text-xl mt-2">Black on Black</div>
+                    <div className="font-serif italic text-[var(--ll-gold)] text-xl mt-2">Tahoe High Country</div>
                   </div>
                 </div>
               </div>
@@ -260,7 +260,7 @@ export default function HomePage() {
                 <span className="italic font-light text-[var(--ll-gold)]">arrival.</span>
               </h2>
               <p className="mt-8 text-white/75 leading-[1.85] font-light">
-                A single, meticulously maintained 2021 Chevrolet Tahoe High Country — detailed before every run, stocked with the amenities our clients expect without ever having to ask. Quantity is not the standard. Condition is.
+                A meticulously maintained executive fleet — the 2021 Chevrolet Tahoe High Country for solo and small-party movement, and the black executive Mercedes-Benz Sprinter for group transport. Detailed before every run. Stocked without ever having to ask.
               </p>
 
               <dl className="mt-10 divide-y divide-[rgba(212,175,55,0.14)] border-t border-b border-[rgba(212,175,55,0.14)]">
@@ -342,9 +342,13 @@ export default function HomePage() {
          ============================================================ */}
       <section data-testid="home-brand-promise-section" className="ll-section bg-[var(--ll-ink)] relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
-          <div className="opacity-[0.05] scale-[1.5]">
-            <Crest size={640} />
-          </div>
+          <img
+            src={IMAGES.logoMaster}
+            alt=""
+            className="opacity-[0.06] max-w-[820px] w-[85vw] h-auto"
+            style={{ filter: 'saturate(0.6) brightness(1.4)' }}
+            draggable={false}
+          />
         </div>
         <div className="ll-container relative">
           <FadeUp className="text-center max-w-4xl mx-auto">

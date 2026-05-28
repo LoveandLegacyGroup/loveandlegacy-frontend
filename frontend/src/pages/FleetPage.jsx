@@ -7,49 +7,117 @@ import { FadeUp, StaggerGroup } from '@/components/brand/FadeUp';
 import { SectionRule } from '@/components/brand/SectionRule';
 import { IMAGES } from '@/constants/brand';
 
-const INTERIOR = ['Premium leather seating', 'Ambient interior lighting', 'Rear climate control', 'Tinted privacy glass', 'USB-C and wireless charging', 'Premium audio'];
-const AMENITIES = ['Chilled still water', 'Premium tissues', 'Phone charger', 'Clean, scented interior always', 'Curated playlist on request', 'Refreshments stocked nightly'];
-const EXTERIOR = ['Black on black presentation', 'Immaculate condition', 'Professional low-profile appearance', 'Detailed before every run', 'Routine mechanical inspections', 'Showroom standard always'];
+const VEHICLES = [
+  {
+    eyebrow: 'Executive SUV',
+    name: '2021 Chevrolet Tahoe High Country',
+    role: 'Solo executives · Airport runs · VIP transport · Executive protection',
+    image: IMAGES.tahoeExteriorWide,
+    interiorImage: IMAGES.tahoeInterior,
+    specs: [
+      ['Capacity', 'Up to 6 guests'],
+      ['Cabin', 'Premium leather · Captain’s chairs'],
+      ['Lighting', 'Ambient interior lighting'],
+      ['Privacy', 'Tinted privacy glass'],
+      ['Connectivity', 'USB-C · Wireless charging'],
+      ['Hospitality', 'Chilled water · Premium audio'],
+    ],
+    cta: 'Reserve the Tahoe',
+  },
+  {
+    eyebrow: 'Group / VIP',
+    name: 'Black Mercedes-Benz Sprinter',
+    role: 'Group travel · VIP tours · Production logistics · Corporate teams',
+    image: IMAGES.sprinterExterior,
+    interiorImage: IMAGES.sprinterInterior,
+    specs: [
+      ['Capacity', 'Up to 14 guests'],
+      ['Cabin', 'Quilted leather lounge seating'],
+      ['Lighting', 'LED ambient mood lighting'],
+      ['Entertainment', 'In-cabin TV · Premium audio'],
+      ['Privacy', 'Pleated privacy blinds · Tinted glass'],
+      ['Hospitality', 'Refreshment console · USB chargers'],
+    ],
+    cta: 'Reserve the Sprinter',
+  },
+];
 
 export default function FleetPage() {
   return (
     <div data-testid="page-fleet">
-      <SEO title="Our Fleet | 2021 Tahoe High Country | Love & Legacy" description="Explore the Love & Legacy fleet. Our immaculate 2021 Chevrolet Tahoe High Country — maintained to the highest executive standard." />
-      <PageHero overline="— The Fleet" title="One Vehicle." accent="Uncompromising Standard." subhead="2021 Chevrolet Tahoe High Country — Atlanta's Premier Executive SUV" image={IMAGES.fleetMain} />
+      <SEO title="Our Fleet | Tahoe & Sprinter | Love & Legacy" description="Tour the Love & Legacy fleet. Our 2021 Chevrolet Tahoe High Country and black executive Mercedes-Benz Sprinter — maintained to the highest standard." />
+      <PageHero overline="— The Fleet" title="Two vehicles." accent="Uncompromising standard." subhead="Executive SUV · Black Sprinter · Atlanta’s Premier Fleet" image={IMAGES.tahoeExteriorWide} />
       <SectionRule />
 
-      {/* Main vehicle showcase */}
-      <section className="ll-section bg-[var(--ll-ink)]" data-testid="fleet-page">
-        <div className="ll-container">
-          <FadeUp className="max-w-3xl">
-            <div className="overline">— Our Vehicle —</div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-4 leading-[1.15] text-balance">The 2021 Chevrolet <span className="text-[var(--ll-gold)]">Tahoe High Country.</span></h2>
-            <p className="mt-6 text-white/85 leading-8">The Love &amp; Legacy fleet is not defined by quantity. It is defined by condition, preparation, and consistency. Our 2021 Chevrolet Tahoe High Country is detailed before every run, maintained to the highest mechanical standard, and stocked with the premium amenities our clients expect — without ever having to ask.</p>
-          </FadeUp>
+      {VEHICLES.map((v, idx) => (
+        <React.Fragment key={v.name}>
+          <section className={`ll-section ${idx % 2 === 0 ? 'bg-[var(--ll-ink)]' : 'bg-[var(--ll-ink-2)]'}`} data-testid={`fleet-vehicle-${idx}`}>
+            <div className="ll-container">
+              <div className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center ${idx % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
+                <FadeUp className="lg:col-span-7">
+                  <div className="relative overflow-hidden aspect-[16/11] bg-[var(--ll-ink-2)]">
+                    <div className="absolute inset-0 ll-kenburns">
+                      <img src={v.image} alt={`${v.name} — exterior`} className="w-full h-full object-cover" style={{ filter: 'saturate(0.92) contrast(1.04) brightness(0.96)' }} />
+                    </div>
+                    <div className="absolute inset-0 ll-img-overlay" />
+                    <div className="absolute left-6 top-6 right-6 flex items-center justify-between text-[10px] tracking-[0.30em] uppercase text-[var(--ll-champagne)]">
+                      <span>{v.eyebrow}</span>
+                      <span className="editorial-num">0{idx + 1}</span>
+                    </div>
+                  </div>
+                </FadeUp>
 
-          <FadeUp className="mt-12">
-            <div className="relative overflow-hidden rounded-lg ll-img-overlay aspect-[16/9]">
-              <img src={IMAGES.fleetMain} alt="2021 Chevrolet Tahoe High Country, black exterior" className="w-full h-full object-cover" style={{ filter: 'saturate(0.85) contrast(1.05)' }} />
-            </div>
-          </FadeUp>
+                <FadeUp className="lg:col-span-5">
+                  <div className="overline">— {v.eyebrow}</div>
+                  <h2 className="text-display text-3xl sm:text-4xl lg:text-[44px] mt-5 leading-[1.05] text-balance">
+                    {v.name}
+                  </h2>
+                  <p className="mt-6 text-[var(--ll-champagne)] text-[12px] tracking-[0.18em] uppercase">{v.role}</p>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[{ title: 'Interior', items: INTERIOR }, { title: 'Amenities', items: AMENITIES }, { title: 'Exterior', items: EXTERIOR }].map((block) => (
-              <FadeUp key={block.title}>
-                <div className="rounded-lg bg-[var(--ll-ink-2)] border border-[rgba(246,241,230,0.08)] p-7 hover:border-[rgba(212,175,55,0.30)] transition-colors">
-                  <div className="overline">{block.title}</div>
-                  <ul className="mt-5 space-y-3">
-                    {block.items.map(i => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-white/80 leading-6"><CheckCircle2 size={14} className="text-[var(--ll-gold)] mt-1 shrink-0" /> {i}</li>
+                  <dl className="mt-10 divide-y divide-[rgba(212,175,55,0.14)] border-t border-b border-[rgba(212,175,55,0.14)]">
+                    {v.specs.map(([k, val]) => (
+                      <div key={k} className="flex items-baseline justify-between gap-6 py-4">
+                        <dt className="text-[10px] tracking-[0.30em] uppercase text-[var(--ll-champagne)] shrink-0">{k}</dt>
+                        <dd className="text-[14px] text-[var(--ll-ivory)]/90 text-right font-light">{val}</dd>
+                      </div>
                     ))}
-                  </ul>
+                  </dl>
+
+                  <div className="mt-10 flex flex-wrap gap-4">
+                    <Link to="/book" className="ll-cta-primary">{v.cta}</Link>
+                  </div>
+                </FadeUp>
+              </div>
+
+              {/* Interior shot */}
+              <FadeUp className="mt-14">
+                <div className="relative overflow-hidden aspect-[21/9] bg-[var(--ll-ink-2)]">
+                  <img src={v.interiorImage} alt={`${v.name} — interior`} className="w-full h-full object-cover" style={{ filter: 'saturate(0.95) contrast(1.04) brightness(0.96)' }} />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(7,7,10,0.10) 0%, rgba(7,7,10,0.50) 100%)' }} />
+                  <div className="absolute left-6 bottom-6 right-6 flex items-end justify-between">
+                    <div className="text-[10px] tracking-[0.30em] uppercase text-[var(--ll-champagne)]">Inside the {v.name.split(' ').slice(-2).join(' ')}</div>
+                    <div className="font-serif italic text-[var(--ll-gold)] text-lg">Detailed before every run</div>
+                  </div>
                 </div>
               </FadeUp>
-            ))}
-          </div>
+            </div>
+          </section>
+          <SectionRule />
+        </React.Fragment>
+      ))}
 
-          <FadeUp className="mt-16 text-center">
-            <Link to="/book" className="ll-cta-primary">Reserve The Tahoe <ChevronRight size={14} className="ml-2" /></Link>
+      <section className="ll-section bg-[var(--ll-ink)] text-center">
+        <div className="ll-container">
+          <FadeUp className="max-w-3xl mx-auto">
+            <h2 className="text-display text-4xl sm:text-5xl lg:text-[64px] leading-[0.98] text-balance">
+              One fleet. <span className="italic font-light text-[var(--ll-gold)]">Every occasion.</span>
+            </h2>
+            <p className="mt-8 text-white/75 leading-[1.85] font-light max-w-xl mx-auto">
+              From a private airport pickup to a multi-vehicle gala arrival, our fleet is positioned for the journey — not the spreadsheet.
+            </p>
+            <div className="mt-10">
+              <Link to="/book" className="ll-cta-primary">Reserve Your Experience <ChevronRight size={14} className="ml-2" /></Link>
+            </div>
           </FadeUp>
         </div>
       </section>

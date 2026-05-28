@@ -11,6 +11,7 @@ import { toast } from 'sonner';
 
 const SERVICE_OPTIONS = SERVICES.map(s => s.name);
 const SOURCE_OPTIONS = ['Google', 'Instagram', 'TikTok', 'Referral', 'Returning Client', 'Other'];
+const VEHICLE_OPTIONS = ['Chevrolet Tahoe (Executive SUV — up to 6)', 'Mercedes-Benz Sprinter (Group / VIP — up to 14)', 'No preference'];
 
 export default function BookPage() {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ export default function BookPage() {
 
   const [form, setForm] = useState({
     service_type: preselected && SERVICE_OPTIONS.includes(preselected) ? preselected : 'Airport Transfer',
+    vehicle_preference: 'No preference',
     pickup_datetime: '',
     pickup_location: '',
     dropoff_location: '',
@@ -60,11 +62,12 @@ export default function BookPage() {
       if (form.service_type !== 'Airport Transfer') payload.flight_number = null;
       await createBooking(payload);
       // Direct-email fallback until SendGrid is configured: opens the user's mail
-      // client with all booking details prefilled to Dontay's business inbox.
+      // client with all booking details prefilled to Dontay’s business inbox.
       try {
         const subject = encodeURIComponent(`Booking Inquiry — ${payload.service_type} — ${payload.name}`);
         const lines = [
           `Service: ${payload.service_type}`,
+          `Vehicle Preference: ${payload.vehicle_preference || 'No preference'}`,
           `Pickup: ${payload.pickup_datetime}`,
           `From: ${payload.pickup_location}`,
           `To: ${payload.dropoff_location}`,
@@ -80,7 +83,7 @@ export default function BookPage() {
         const body = encodeURIComponent(lines + '\n\nLove & Legacy Executive Transportation');
         window.open(`mailto:${BRAND.email}?subject=${subject}&body=${body}`, '_blank');
       } catch (_) { /* no-op */ }
-      toast.success('Reservation request received — we\u2019ll confirm within two hours.');
+      toast.success('Reservation request received — we’ll confirm within two hours.');
       navigate('/thank-you?type=booking');
     } catch (err) {
       toast.error('Could not submit — please try again or call us directly.');
@@ -108,6 +111,12 @@ export default function BookPage() {
                 <label className="ll-label" htmlFor="service_type">Service Type</label>
                 <select id="service_type" data-testid="booking-form-service-type" className="ll-select" value={form.service_type} onChange={update('service_type')}>
                   {SERVICE_OPTIONS.map(s => <option key={s} value={s}>{s}</option>)}
+                </select>
+              </div>
+              <div className="md:col-span-2">
+                <label className="ll-label" htmlFor="vehicle_preference">Vehicle Preference</label>
+                <select id="vehicle_preference" data-testid="booking-form-vehicle-preference" className="ll-select" value={form.vehicle_preference} onChange={update('vehicle_preference')}>
+                  {VEHICLE_OPTIONS.map(v => <option key={v} value={v}>{v}</option>)}
                 </select>
               </div>
               <div>

@@ -7,7 +7,7 @@ export default function ProductionTransportationPage() {
     <ServicePageTemplate
       meta={{
         title: 'Production Transportation Atlanta | Film & Music | Love & Legacy',
-        description: "Atlanta film and music production transportation. Crew, artist, and talent logistics. Trusted by Atlanta's production community.",
+        description: "Atlanta film and music production transportation. Crew, artist, and talent logistics. Trusted by Atlanta’s production community.",
       }}
       hero={{
         crumb: 'Production Transportation',
@@ -21,7 +21,7 @@ export default function ProductionTransportationPage() {
       intro={{
         overline: 'Production Transportation',
         heading: 'Hit the Call Sheet. Every Time.',
-        body: "Atlanta is one of the world's premier production markets. The talent, crew, and artists that power it trust Love & Legacy to keep the schedule and protect the standard.",
+        body: "Atlanta is one of the world’s premier production markets. The talent, crew, and artists that power it trust Love & Legacy to keep the schedule and protect the standard.",
       }}
       signals={{
         heading: 'Production Standards',

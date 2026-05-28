@@ -149,17 +149,17 @@
 /* Image treatment overlays */
 .ll-img-overlay::after {
   content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(180deg, rgba(7,7,10,0.45) 0%, rgba(7,7,10,0.65) 100%);
+  background: linear-gradient(180deg, rgba(7,7,10,0.20) 0%, rgba(7,7,10,0.48) 100%);
 }
-.ll-img-overlay-strong::after { background: linear-gradient(180deg, rgba(7,7,10,0.60) 0%, rgba(7,7,10,0.82) 100%); }
-.ll-img-overlay-hero::after { background: linear-gradient(180deg, rgba(7,7,10,0.55) 0%, rgba(7,7,10,0.72) 45%, rgba(7,7,10,0.96) 100%); }
+.ll-img-overlay-strong::after { background: linear-gradient(180deg, rgba(7,7,10,0.40) 0%, rgba(7,7,10,0.68) 100%); }
+.ll-img-overlay-hero::after { background: linear-gradient(180deg, rgba(7,7,10,0.30) 0%, rgba(7,7,10,0.55) 45%, rgba(7,7,10,0.94) 100%); }
 
-/* Cinematic image filter \u2014 forces every photo into deep luxury mood */
+/* Cinematic image filter \u2014 soft luxury grade preserving real brand photos */
 .ll-cinematic-img {
-  filter: saturate(0.55) brightness(0.62) contrast(1.18);
+  filter: saturate(0.88) brightness(0.92) contrast(1.06);
 }
 .ll-cinematic-img-soft {
-  filter: saturate(0.70) brightness(0.78) contrast(1.10);
+  filter: saturate(0.92) brightness(0.96) contrast(1.04);
 }
 
 /* Ken Burns slow zoom */

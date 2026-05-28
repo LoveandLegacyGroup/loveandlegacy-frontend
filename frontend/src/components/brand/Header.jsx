@@ -29,15 +29,15 @@ export const Header = () => {
   return (
     <header
       data-testid="site-header"
-      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,backdrop-filter,border-color,height] duration-500 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-500 ${
         scrolled
           ? 'bg-[rgba(7,7,10,0.92)] backdrop-blur-md border-b border-[rgba(212,175,55,0.18)]'
           : 'bg-gradient-to-b from-[rgba(7,7,10,0.55)] to-transparent border-b border-transparent'
       }`}
     >
-      <div className="ll-container flex items-center justify-between h-[88px] md:h-[104px]">
-        <Link to="/" aria-label="Love & Legacy home" className="flex items-center" data-testid="nav-logo">
-          <Crest size={32} variant="full" />
+      <div className="ll-container flex items-center justify-between h-[96px] md:h-[112px]">
+        <Link to="/" aria-label="Love & Legacy home" className="flex items-center py-2" data-testid="nav-logo">
+          <Crest size={72} variant="master" className="md:!w-[88px] md:!h-[88px]" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-10" aria-label="Primary">
@@ -86,13 +86,12 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* Mobile drawer */}
       {open && (
         <div className="fixed inset-0 z-[60] lg:hidden" data-testid="nav-mobile-drawer">
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setOpen(false)} />
           <aside className="absolute right-0 top-0 h-full w-[88%] max-w-sm bg-[#07070A] border-l border-[rgba(212,175,55,0.20)] flex flex-col">
-            <div className="flex items-center justify-between px-6 h-[78px] border-b border-[rgba(212,175,55,0.18)]">
-              <Crest size={32} />
+            <div className="flex items-center justify-between px-6 h-[96px] border-b border-[rgba(212,175,55,0.18)]">
+              <Crest size={56} variant="master" />
               <button onClick={() => setOpen(false)} className="w-10 h-10 inline-flex items-center justify-center text-[var(--ll-gold)]" aria-label="Close menu" data-testid="nav-mobile-close-button">
                 <X size={20} />
               </button>

@@ -51,6 +51,7 @@ class BookingCreate(BaseModel):
     model_config = ConfigDict(extra="ignore", str_strip_whitespace=True)
 
     service_type: str = Field(..., description="One of the six service types")
+    vehicle_preference: Optional[str] = None
     pickup_datetime: str = Field(..., min_length=1)
     pickup_location: str = Field(..., min_length=1)
     dropoff_location: str = Field(..., min_length=1)

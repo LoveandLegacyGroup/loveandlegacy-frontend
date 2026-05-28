@@ -69,6 +69,7 @@ def notify_booking(booking: Dict[str, Any]) -> bool:
         return False
     lines = [
         ("Service Type", booking.get("service_type")),
+        ("Vehicle Preference", booking.get("vehicle_preference")),
         ("Pickup Date & Time", booking.get("pickup_datetime")),
         ("Pickup Location", booking.get("pickup_location")),
         ("Drop-Off Location", booking.get("dropoff_location")),

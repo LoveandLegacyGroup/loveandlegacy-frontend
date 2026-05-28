@@ -41,7 +41,7 @@ export const SERVICES = [
     slug: 'production-transportation',
     name: 'Production Transportation',
     short: 'The Industry Standard.',
-    blurb: "Film sets, studios, artist logistics. Atlanta's production community trusts Love & Legacy.",
+    blurb: "Film sets, studios, artist logistics. Atlanta’s production community trusts Love & Legacy.",
   },
   {
     slug: 'corporate-accounts',
@@ -98,59 +98,57 @@ export const ATLANTA_AREAS = [
 ];
 
 export const IMAGES = {
-  // ---- Brand-faithful local logo (extracted cleanly from ecosystem) ----
-  crest: '/brand/crest_logo.png',
-  crestShield: '/brand/crest_logo_only.png',
+  // ---- Official Love & Legacy brand assets ----
+  // Master logo (HD, 1024x1024) — used everywhere we display the crest
+  crest:            '/brand/logo_master.png',
+  crestShield:      '/brand/logo_master.png',
+  logoMaster:       '/brand/logo_master.png',
+  logo512:          '/brand/logo_512.png',
+  logo256:          '/brand/logo_256.png',
 
-  // ---- Verified dark luxury stock imagery (heavy CSS dark filters applied) ----
-  // PLACEHOLDER until client uploads actual Tahoe/Escalade photography.
-  // All selected for: black/dark vehicles, cinematic mood, executive presentation.
+  // ---- Vehicle imagery (Tahoe + Sprinter ONLY) ----
+  tahoeExterior:        '/brand/tahoe_exterior.jpg',
+  tahoeExteriorWide:    '/brand/tahoe_exterior_landscape.jpg',
+  tahoeInterior:        '/brand/tahoe_interior.jpg',
+  sprinterExterior:     '/brand/sprinter_exterior.jpg',
+  sprinterInterior:     '/brand/sprinter_interior.jpg',
 
-  // Hero — dark vehicle at night
-  heroPrimary: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=2200&q=85',
-  heroAlt: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=2200&q=85',
-
-  // Fleet — black luxury SUV
-  fleetMain: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=85',
-  fleetDetail1: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1400&q=85',
-  fleetDetail2: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1400&q=85',
-
-  // Private aviation
-  privateJet: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1800&q=85',
-  privateJetCabin: 'https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1600&q=85',
-
-  // Atlanta skyline
-  atlantaSkyline: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1800&q=85',
-  atlantaNight: 'https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?auto=format&fit=crop&w=1800&q=85',
-  atlantaBuckhead: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1600&q=85',
-  atlantaMidtown: 'https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?auto=format&fit=crop&w=1600&q=85',
-
-  // Chauffeur / professional
-  chauffeur: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=85',
-  chauffeurDoor: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=85',
-
-  // Service-specific
-  hotelValet: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1600&q=85',
-  protection: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=85',
-  production: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1600&q=85',
-  event: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1600&q=85',
-  corporate: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1600&q=85',
-  interior: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1600&q=85',
-
-  // Backwards compat aliases
-  cinematicCar: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=2000&q=85',
-  blackCarNight: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=2000&q=85',
-
-  // Convenience aliases used in Instagram strip / atlanta tiles
-  tahoeNight: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1400&q=85',
-  tahoeExecutive: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1400&q=85',
-  tahoeInMotion: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1400&q=85',
-  chauffeurVip: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=85',
-  jetPrivate: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1400&q=85',
-  arrivalLobby: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=85',
-  insideAtlanta: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1400&q=85',
-
-  // Premium black leather duffel for Instagram strip (Pexels)
-  luxuryDuffel: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=1400&q=85',
-  luxuryLeather: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1400&q=85',
+  // ---- Section mappings (per spec) ----
+  // HERO — Tahoe exterior (executive presence)
+  heroPrimary:      '/brand/tahoe_exterior_landscape.jpg',
+  heroAlt:          '/brand/tahoe_exterior.jpg',
+  // FLEET / large group — Sprinter exterior
+  fleetMain:        '/brand/sprinter_exterior.jpg',
+  fleetDetail1:     '/brand/sprinter_interior.jpg',
+  fleetDetail2:     '/brand/tahoe_interior.jpg',
+  // EXECUTIVE / AIRPORT / VIP / PROTECTION — Tahoe exterior
+  privateJet:       '/brand/tahoe_exterior_landscape.jpg',
+  privateJetCabin:  '/brand/tahoe_interior.jpg',
+  // ATLANTA tiles — mix of Tahoe ext, interior, Sprinter ext, interior
+  atlantaSkyline:   '/brand/tahoe_exterior_landscape.jpg',
+  atlantaNight:     '/brand/sprinter_interior.jpg',
+  atlantaBuckhead:  '/brand/tahoe_interior.jpg',
+  atlantaMidtown:   '/brand/sprinter_exterior.jpg',
+  // Chauffeur / professional — Tahoe interior (premium passenger view)
+  chauffeur:        '/brand/tahoe_interior.jpg',
+  chauffeurDoor:    '/brand/tahoe_exterior.jpg',
+  // Service pages
+  hotelValet:       '/brand/tahoe_exterior.jpg',
+  protection:       '/brand/tahoe_exterior_landscape.jpg',
+  production:       '/brand/sprinter_exterior.jpg',
+  event:            '/brand/sprinter_interior.jpg',
+  corporate:        '/brand/tahoe_exterior_landscape.jpg',
+  interior:         '/brand/tahoe_interior.jpg',
+  // Backwards compat aliases (used in places throughout app)
+  cinematicCar:     '/brand/tahoe_exterior_landscape.jpg',
+  blackCarNight:    '/brand/tahoe_exterior.jpg',
+  tahoeNight:       '/brand/tahoe_exterior.jpg',
+  tahoeExecutive:   '/brand/tahoe_exterior_landscape.jpg',
+  tahoeInMotion:    '/brand/tahoe_exterior.jpg',
+  chauffeurVip:     '/brand/tahoe_interior.jpg',
+  jetPrivate:       '/brand/sprinter_exterior.jpg',
+  arrivalLobby:     '/brand/tahoe_exterior.jpg',
+  insideAtlanta:    '/brand/sprinter_interior.jpg',
+  luxuryDuffel:     '/brand/sprinter_interior.jpg',
+  luxuryLeather:    '/brand/tahoe_interior.jpg',
 };

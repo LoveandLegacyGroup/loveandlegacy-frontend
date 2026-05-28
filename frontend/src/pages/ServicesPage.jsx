@@ -13,7 +13,7 @@ const ICONS = [Plane, Briefcase, Crown, ShieldCheck, Sparkles, Star];
 export default function ServicesPage() {
   return (
     <div data-testid="page-services">
-      <SEO title="Services — Love & Legacy Executive Transportation" description="Atlanta's premium executive transportation services: airport transfers, executive rides, VIP events, executive protection, production, and corporate accounts." />
+      <SEO title="Services — Love & Legacy Executive Transportation" description="Atlanta’s premium executive transportation services: airport transfers, executive rides, VIP events, executive protection, production, and corporate accounts." />
       <PageHero
         overline="— Services”"
         title="Every Journey."

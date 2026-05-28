@@ -41,7 +41,7 @@ export default function ContactPage() {
         ].filter(Boolean).join('\n'));
         window.open(`mailto:${BRAND.email}?subject=${subject}&body=${body}`, '_blank');
       } catch (_) { /* no-op */ }
-      toast.success('Message received — we\u2019ll respond shortly.');
+      toast.success('Message received — we’ll respond shortly.');
       nav('/thank-you?type=contact');
     } catch {
       toast.error('Could not submit — please try again or call us.');
@@ -50,7 +50,7 @@ export default function ContactPage() {
 
   return (
     <div data-testid="page-contact">
-      <SEO title="Contact | Love & Legacy Executive Transportation" description="Reach Atlanta's premier executive transportation. Phone, email, and direct inquiry." />
+      <SEO title="Contact | Love & Legacy Executive Transportation" description="Reach Atlanta’s premier executive transportation. Phone, email, and direct inquiry." />
       <PageHero overline="— Contact" title="Speak with" accent="Love & Legacy." subhead="Direct lines for direct service." image={IMAGES.hotelValet} />
       <SectionRule />
       <section className="ll-section bg-[var(--ll-ink)]" data-testid="contact-page">

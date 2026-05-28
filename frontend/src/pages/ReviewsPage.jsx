@@ -10,7 +10,7 @@ import { REVIEWS, IMAGES } from '@/constants/brand';
 export default function ReviewsPage() {
   return (
     <div data-testid="page-reviews">
-      <SEO title="Client Reviews | Love & Legacy Executive Transportation" description="Read what Atlanta's executives, artists, and professionals say about Love & Legacy. 5-star rated executive transportation." />
+      <SEO title="Client Reviews | Love & Legacy Executive Transportation" description="Read what Atlanta’s executives, artists, and professionals say about Love & Legacy. 5-star rated executive transportation." />
       <PageHero overline="— Client Reviews" title="Five Stars." accent="Every Time." subhead="The words of our clients speak louder than any advertisement." image={IMAGES.hotelValet} />
       <SectionRule />
 

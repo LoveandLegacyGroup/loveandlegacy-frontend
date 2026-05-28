@@ -7,7 +7,7 @@ export default function VipEventPage() {
     <ServicePageTemplate
       meta={{
         title: 'VIP Event Transportation Atlanta | Love & Legacy',
-        description: "Arrive at galas, concerts, weddings and private events in Atlanta\u2019s premier VIP transportation. Your arrival is part of the event.",
+        description: "Arrive at galas, concerts, weddings and private events in Atlanta’s premier VIP transportation. Your arrival is part of the event.",
       }}
       hero={{
         crumb: 'VIP & Event',
