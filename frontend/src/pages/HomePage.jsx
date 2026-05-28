@@ -33,15 +33,19 @@ const FLEET_SPECS = [
 ];
 
 const ATLANTA_TILES = [
-  { src: IMAGES.atlantaSkyline, label: 'Downtown' },
-  { src: IMAGES.atlantaBuckhead, label: 'Buckhead' },
-  { src: IMAGES.atlantaMidtown, label: 'Midtown' },
-  { src: IMAGES.atlantaNight, label: 'After Hours' },
+  { src: IMAGES.tahoeNight,    label: 'Downtown · Night' },
+  { src: IMAGES.tahoeInMotion, label: 'In Motion' },
+  { src: IMAGES.chauffeurVip,  label: 'Curbside' },
+  { src: IMAGES.jetPrivate,    label: 'Private Aviation' },
 ];
 
 const INSTAGRAM_TILES = [
-  IMAGES.fleetMain, IMAGES.chauffeur, IMAGES.privateJet,
-  IMAGES.hotelValet, IMAGES.interior, IMAGES.atlantaSkyline,
+  IMAGES.tahoeNight,       // Black Tahoe with Atlanta skyline
+  IMAGES.chauffeurVip,     // Chauffeur opening door
+  IMAGES.jetPrivate,       // Private jet
+  IMAGES.luxuryDuffel,     // Premium black leather duffel luggage
+  IMAGES.tahoeExecutive,   // Tahoe with executive at jet
+  IMAGES.tahoeInMotion,    // Tahoe in motion
 ];
 
 const heroWordVariants = {

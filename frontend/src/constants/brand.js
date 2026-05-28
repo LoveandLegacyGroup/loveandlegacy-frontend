@@ -98,25 +98,59 @@ export const ATLANTA_AREAS = [
 ];
 
 export const IMAGES = {
-  heroPrimary: 'https://images.unsplash.com/photo-1697908833194-e29be25dea12?auto=format&fit=crop&w=2000&q=85',
-  heroAlt: 'https://images.unsplash.com/photo-1631712339347-58df50e8b3f1?auto=format&fit=crop&w=2000&q=85',
-  fleetMain: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1800&q=85',
-  fleetDetail1: 'https://images.unsplash.com/photo-1611016186353-9af58c69a533?auto=format&fit=crop&w=1400&q=85',
+  // ---- Brand-faithful local logo (extracted cleanly from ecosystem) ----
+  crest: '/brand/crest_logo.png',
+  crestShield: '/brand/crest_logo_only.png',
+
+  // ---- Verified dark luxury stock imagery (heavy CSS dark filters applied) ----
+  // PLACEHOLDER until client uploads actual Tahoe/Escalade photography.
+  // All selected for: black/dark vehicles, cinematic mood, executive presentation.
+
+  // Hero — dark vehicle at night
+  heroPrimary: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=2200&q=85',
+  heroAlt: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=2200&q=85',
+
+  // Fleet — black luxury SUV
+  fleetMain: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=85',
+  fleetDetail1: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1400&q=85',
   fleetDetail2: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1400&q=85',
-  privateJet: 'https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1800&q=85',
-  privateJetCabin: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1600&q=85',
-  atlantaSkyline: 'https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?auto=format&fit=crop&w=1600&q=85',
-  atlantaNight: 'https://images.unsplash.com/photo-1606854378569-7e3afaff61c5?auto=format&fit=crop&w=1600&q=85',
+
+  // Private aviation
+  privateJet: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1800&q=85',
+  privateJetCabin: 'https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1600&q=85',
+
+  // Atlanta skyline
+  atlantaSkyline: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1800&q=85',
+  atlantaNight: 'https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?auto=format&fit=crop&w=1800&q=85',
   atlantaBuckhead: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1600&q=85',
-  atlantaMidtown: 'https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=1600&q=85',
-  chauffeur: 'https://images.unsplash.com/photo-1571689936114-b16146c9570a?auto=format&fit=crop&w=1600&q=85',
-  chauffeurDoor: 'https://images.unsplash.com/photo-1631712339347-58df50e8b3f1?auto=format&fit=crop&w=1600&q=85',
+  atlantaMidtown: 'https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?auto=format&fit=crop&w=1600&q=85',
+
+  // Chauffeur / professional
+  chauffeur: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=85',
+  chauffeurDoor: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=85',
+
+  // Service-specific
   hotelValet: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1600&q=85',
   protection: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=85',
-  production: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1600&q=85',
-  event: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1600&q=85',
-  corporate: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85',
-  interior: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85',
-  cinematicCar: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85',
-  blackCarNight: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85',
+  production: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1600&q=85',
+  event: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1600&q=85',
+  corporate: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1600&q=85',
+  interior: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1600&q=85',
+
+  // Backwards compat aliases
+  cinematicCar: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=2000&q=85',
+  blackCarNight: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=2000&q=85',
+
+  // Convenience aliases used in Instagram strip / atlanta tiles
+  tahoeNight: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1400&q=85',
+  tahoeExecutive: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1400&q=85',
+  tahoeInMotion: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1400&q=85',
+  chauffeurVip: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=85',
+  jetPrivate: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1400&q=85',
+  arrivalLobby: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=85',
+  insideAtlanta: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1400&q=85',
+
+  // Premium black leather duffel for Instagram strip (Pexels)
+  luxuryDuffel: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=1400&q=85',
+  luxuryLeather: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1400&q=85',
 };

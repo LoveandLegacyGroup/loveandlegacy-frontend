@@ -35,9 +35,9 @@ export const Header = () => {
           : 'bg-gradient-to-b from-[rgba(7,7,10,0.55)] to-transparent border-b border-transparent'
       }`}
     >
-      <div className="ll-container flex items-center justify-between h-[78px] md:h-[96px]">
-        <Link to="/" aria-label="Love & Legacy home" className="flex items-center gap-3" data-testid="nav-logo">
-          <Crest size={38} withText />
+      <div className="ll-container flex items-center justify-between h-[88px] md:h-[104px]">
+        <Link to="/" aria-label="Love & Legacy home" className="flex items-center" data-testid="nav-logo">
+          <Crest size={32} variant="full" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-10" aria-label="Primary">
