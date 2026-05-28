@@ -100,7 +100,7 @@ export const ATLANTA_AREAS = [
 export const IMAGES = {
   heroPrimary: 'https://images.unsplash.com/photo-1697908833194-e29be25dea12?auto=format&fit=crop&w=2000&q=85',
   heroAlt: 'https://images.unsplash.com/photo-1631712339347-58df50e8b3f1?auto=format&fit=crop&w=2000&q=85',
-  fleetMain: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1800&q=85',
+  fleetMain: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1800&q=85',
   fleetDetail1: 'https://images.unsplash.com/photo-1611016186353-9af58c69a533?auto=format&fit=crop&w=1400&q=85',
   fleetDetail2: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1400&q=85',
   privateJet: 'https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1800&q=85',

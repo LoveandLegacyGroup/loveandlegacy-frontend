@@ -1,46 +1,30 @@
 [
   {
-    "content": "Phase 2: Install dependencies (sendgrid)",
+    "content": "Polish: refine global tokens (typography, spacing, Ken Burns, button sweep) in index.css",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Backend - Booking/Contact/Corporate Inquiry models + endpoints + SendGrid email",
+    "content": "Polish: add cinematic page transitions in Layout (Framer Motion AnimatePresence)",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Set up global design tokens in index.css",
+    "content": "Polish: refine PageHero (Ken Burns, editorial headline reveal)",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Frontend - Shared layout (Nav, Footer, MobileStickyBar, brand components)",
+    "content": "Polish: rewrite HomePage with editorial sections (hero, pillars, services, fleet, reviews, promise, atlanta, instagram, final CTA)",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Frontend - Home page (10 sections)",
+    "content": "Polish: refine Header (luxury kerning, brand crest balance)",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Frontend - 6 Service sub-pages + Services hub",
+    "content": "Polish: verify mobile responsiveness + screenshot pass",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Frontend - Fleet, Experience, About, Reviews pages",
-    "status": "completed"
-  },
-  {
-    "content": "Phase 2: Frontend - Book Now form, Contact, Corporate Inquiry, Thank You, Legal",
-    "status": "completed"
-  },
-  {
-    "content": "Phase 2: All user stories covered (home, services, booking, mobile sticky bar)",
-    "status": "completed"
-  },
-  {
-    "content": "Phase 2: End-to-end testing using testing_agent_v3",
-    "status": "completed"
-  },
-  {
-    "content": "Phase 2: Fix minor flight_number nullification on backend",
+    "content": "Polish: replace yellow Mercedes with black luxury vehicle for fleet showcase",
     "status": "completed"
   }
 ]
