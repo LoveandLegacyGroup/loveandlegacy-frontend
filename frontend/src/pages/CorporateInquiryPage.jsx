@@ -29,6 +29,23 @@ export default function CorporateInquiryPage() {
     try {
       setSubmitting(true);
       await createCorporateInquiry(form);
+      try {
+        const subject = encodeURIComponent(`Corporate Inquiry — ${form.company}`);
+        const body = encodeURIComponent([
+          `Company: ${form.company}`,
+          `Contact: ${form.name}`,
+          form.role ? `Role: ${form.role}` : null,
+          `Email: ${form.email}`,
+          form.phone ? `Phone: ${form.phone}` : null,
+          form.monthly_volume ? `Volume: ${form.monthly_volume}` : null,
+          form.use_case ? `Primary Use Case: ${form.use_case}` : null,
+          '',
+          form.notes ? `Notes:\n${form.notes}` : null,
+          '',
+          'Love & Legacy Executive Transportation',
+        ].filter(Boolean).join('\n'));
+        window.open(`mailto:${BRAND.email}?subject=${subject}&body=${body}`, '_blank');
+      } catch (_) { /* no-op */ }
       toast.success('Corporate inquiry received — priority follow-up within 1 business day.');
       nav('/thank-you?type=corporate');
     } catch {

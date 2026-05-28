@@ -27,6 +27,20 @@ export default function ContactPage() {
     try {
       setSubmitting(true);
       await createContact(form);
+      try {
+        const subject = encodeURIComponent(`Contact — ${form.subject || form.name}`);
+        const body = encodeURIComponent([
+          `Name: ${form.name}`,
+          `Email: ${form.email}`,
+          form.phone ? `Phone: ${form.phone}` : null,
+          form.subject ? `Subject: ${form.subject}` : null,
+          '',
+          form.message,
+          '',
+          'Love & Legacy Executive Transportation',
+        ].filter(Boolean).join('\n'));
+        window.open(`mailto:${BRAND.email}?subject=${subject}&body=${body}`, '_blank');
+      } catch (_) { /* no-op */ }
       toast.success('Message received — we\u2019ll respond shortly.');
       nav('/thank-you?type=contact');
     } catch {

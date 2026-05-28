@@ -59,6 +59,27 @@ export default function BookPage() {
       const payload = { ...form, passengers: Number(form.passengers) };
       if (form.service_type !== 'Airport Transfer') payload.flight_number = null;
       await createBooking(payload);
+      // Direct-email fallback until SendGrid is configured: opens the user's mail
+      // client with all booking details prefilled to Dontay's business inbox.
+      try {
+        const subject = encodeURIComponent(`Booking Inquiry — ${payload.service_type} — ${payload.name}`);
+        const lines = [
+          `Service: ${payload.service_type}`,
+          `Pickup: ${payload.pickup_datetime}`,
+          `From: ${payload.pickup_location}`,
+          `To: ${payload.dropoff_location}`,
+          `Passengers: ${payload.passengers}`,
+          payload.flight_number ? `Flight: ${payload.flight_number}` : null,
+          payload.notes ? `Notes: ${payload.notes}` : null,
+          '',
+          `Name: ${payload.name}`,
+          `Phone: ${payload.phone}`,
+          `Email: ${payload.email}`,
+          payload.source ? `Heard via: ${payload.source}` : null,
+        ].filter(Boolean).join('\n');
+        const body = encodeURIComponent(lines + '\n\nLove & Legacy Executive Transportation');
+        window.open(`mailto:${BRAND.email}?subject=${subject}&body=${body}`, '_blank');
+      } catch (_) { /* no-op */ }
       toast.success('Reservation request received — we\u2019ll confirm within two hours.');
       navigate('/thank-you?type=booking');
     } catch (err) {
@@ -150,7 +171,7 @@ export default function BookPage() {
               <button type="submit" disabled={submitting} data-testid="booking-form-submit-button" className="ll-cta-primary w-full sm:w-auto disabled:opacity-60">{submitting ? 'Submitting…' : 'Submit Request'}</button>
               <a href={`tel:${BRAND.phoneTel}`} className="ll-cta-ghost w-full sm:w-auto inline-flex items-center gap-2"><Phone size={14} /> Call Now</a>
             </div>
-            <p className="mt-6 text-xs text-white/55">Prefer to speak with us directly? Call {BRAND.phone}.</p>
+            <p className="mt-6 text-xs text-white/55">Prefer to speak with us directly? Call {BRAND.phone} or <a href={`mailto:${BRAND.email}?subject=Booking%20Inquiry%20%E2%80%94%20Love%20%26%20Legacy`} className="text-[var(--ll-gold)] hover:underline">email Dontay directly</a>.</p>
           </form>
 
           <aside className="lg:col-span-4 rounded-lg bg-[var(--ll-ink-2)] border border-[rgba(212,175,55,0.20)] p-7 md:p-8">
